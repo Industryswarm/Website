@@ -3,7 +3,7 @@
 <head>
 <link href="http://fonts.googleapis.com/css?family=Open+Sans:400,300,400italic,600,600italic,700,700italic,300italic" rel="stylesheet" type="text/css">
 <meta charset="utf-8">
-<title>IndustrySwarm | A Business Applications Platform</title>
+<title>IndustrySwarm | Enterprise Application Labs</title>
 <meta name="apple-mobile-web-app-capable" content="yes">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link href="animate.css" rel="stylesheet" type="text/css">
@@ -19,111 +19,85 @@
 <link rel="shortcut icon" href="favicon.png">
 </head>
 <body class="collapsing_header">
-<header>
-     <div class="container">
-          <div class="navbar navbar-default" role="navigation">
-               <div class="navbar-header"><a class="" href="index.html"> <img class="brandLogo" src="images/small_industryswarm.png" alt="IndustrySwarm Logo"/><a class="btn btn-navbar btn-default navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse"><span class="nb_left pull-left"> <span class="fa fa-reorder"></span></span> <span class="nb_right pull-right">menu</span> </a></div>
-               <div class="collapse navbar-collapse">
-                    <ul class="nav pull-right navbar-nav">
-                         <li class="active"><a href="index.html">IndustrySwarm</a></li>
-                         <li><a href="https://manager.industryswarm.com">Manager</a></li>
-                         <li><a href="https://support.industryswarm.com/portal/home">Support</a></li>
-                         <li><a href="https://blog.industryswarm.com" target="_blank">Blog</a></li>
-                         <li><a href="#" target="_blank" onclick="alert('New accounts are not currently available...');return false;">Create Account</a></li>
-                    </ul>
-               </div>
-          </div>
-     </div>
-</header>
 
-<div class="main">
-     
-     <section class="call_to_action">
+<style>
+     html, body {
+       height: 100%;
+       margin: 0;
+     }
+     .wrapper {
+       min-height: 95%;
+       margin-bottom: -50px;
+     }
+     footer,
+     .push {
+       height: 50px;
+     }
+</style>
+
+<div class="wrapper">
+
+     <header>
           <div class="container">
-               <h3>Coming Soon</h3>
-               <h4>A platform for web and business applications, supply chain, commerce, CRM, Finances, Projects and more - including your own designs.</h4>
-          </div>     
-     </section>
-     <section class="features_teasers_wrapper">
-          <div class="container">
-               <div class="row">
-                    <div class="feature_teaser col-sm-4 col-md-4">
-                         <h3>Services</h3>
-                         <p>IndustrySwarm Services is the core services platform of IndustrySwarm. It is a repository for all business objects and logic, membership management with RESTful API and WebSockets-based interfaces.</p>
-                    </div>                    
-                    <div class="feature_teaser col-sm-4 col-md-4">
-                         <h3>Pages</h3>
-                         <p>IndustrySwarm Pages allows you to create content and logic-rich applications for web and native devices.</p>
-                    </div>
-                    <div class="feature_teaser col-sm-4 col-md-4">
-                         <h3>CRM</h3>
-                         <p>IndustrySwarm CRM is an application for Customer Relationship Management for Sales for B2B Customers, Investor relationships, Strategic Partner / Channel Relationships, Competitor Relationships and more.</p>
-                    </div>
-               </div>
-               <div class="row">
-                    <div class="feature_teaser col-sm-4 col-md-4">
-                         <h3>ProductPipes</h3>
-                         <p>IndustrySwarm ProductPipes provides a comprehensive platform for supply chain, product management and both online and in-store commerce.</p>
-                    </div>
-                    <div class="feature_teaser col-sm-4 col-md-4">
-                         <h3>Finances</h3>
-                         <p>IndustrySwarm Finances allows you to manage your personal or organisation's books in the cloud.</p>
-                    </div>
-                    <div class="feature_teaser col-sm-4 col-md-4">
-                         <h3>Projects</h3>
-                         <p>IndustrySwarm Projects allows you to create and manage projects in the cloud, create and execute tickets, assign resources and work in whichever project methodology works best for you - whether that be agile methods like Kanban and Scrum, or something more traditional.</p>
-                    </div>
-               </div>
-               <div class="row">
-                    <div class="feature_teaser col-sm-4 col-md-4">
-                         <h3>GraphCX</h3>
-                         <p>IndustrySwarm GraphCX provides an interface for managing both core and custom IndustrySwarm data objects within a graph spreadsheet. That is - all business objects are represented as nodes on a graph with the relationships between them represented as edges. Attibutes/values for those business objects can be static data from the database or calculated values based on Formula attributes - with the ability to have calculated values for each node dependent on a combination of static values and calculated values on the connected nodes in a flow-on fashion.</p>
-                    </div>
-                    <div class="feature_teaser col-sm-4 col-md-4">
-                         <h3>Helpdesk</h3>
-                         <p>IndustrySwarm Helpdesk allows you to support cases for your B2C customers through a multi-channel system of email, web forms, phone, social and more.</p>
-                    </div>
-                    <div class="feature_teaser col-sm-4 col-md-4">
-                         <h3>LivingData.me</h3>
-                         <p>IndustrySwarm LivingData.me provides a comprehensive data warehousing, analytics and trend analysis system with machine/deep learning for both companies and individuals.</p>
-                    </div>
-               </div>
-               <div class="row">
-                    <div class="feature_teaser col-sm-4 col-md-4">
-                         <h3>MyJSLab</h3>
-                         <p>MyJSLab is a set of tools for Life Sciences (cheminformatics, bioinformatics, genetics) and Engineering.</p>
-                    </div>
-                    <div class="feature_teaser col-sm-4 col-md-4">
-                         <h3>People</h3>
-                         <p>IndustrySwarm People is an application for managing human resources within your business, including organisational structure, performance planning, training, interviews, onboarding, exits and more.</p>
-                    </div>
-                    <div class="feature_teaser col-sm-4 col-md-4">
-                         <h3>Processes</h3>
-                         <p>IndustrySwarm Processes is an application for managing your business processes and workflow - both those that are primarily manual and those with automated components.</p>
+               <div class="navbar navbar-default" role="navigation">
+                    <div class="navbar-header"><a class="" href="index.html"> <img class="brandLogo" src="images/small_industryswarm.png" alt="IndustrySwarm Logo"/><a class="btn btn-navbar btn-default navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse"><span class="nb_left pull-left"> <span class="fa fa-reorder"></span></span> <span class="nb_right pull-right">menu</span> </a></div>
+                    <div class="collapse navbar-collapse">
+                         <ul class="nav pull-right navbar-nav">
+                              <li class="active"><a href="index.html">IndustrySwarm</a></li>
+                              <li><a href="https://www.industryswarm.com/isnode.html">ISNode</a></li>
+                              <li><a href="https://blog.industryswarm.com" target="_blank">Blog</a></li>
+                         </ul>
                     </div>
                </div>
           </div>
-     </section>
+     </header>
 
+     <div class="main">
 
-     <footer>
-          <section class="copyright">
+          <section class="call_to_action">
+               <div class="container">
+                    <h3>IndustrySwarm</h3>
+                    <h4>Enterprise Application Labs</h4>
+               </div>     
+          </section>
+          <section class="features_teasers_wrapper">
                <div class="container">
                     <div class="row">
-                         <div class="col-sm-6 col-md-6"> Copyright ©2017 IndustrySwarm, All rights reserved </div>
-                         <div class="col-sm-6 col-md-6" style="text-align:right;"> 
-                              <a href="https://manager.industryswarm.com">Manager</a> | 
-                              <a href="http://www.productpipes.com">ProductPipes</a> | 
-                              <a href="http://www.graphcx.com">GraphCX</a> | 
-                              <a href="http://www.livingdata.me">LivingData.me</a> | 
-                              <a href="http://www.myjslab.com">MyJSLab</a> | 
-                              <a href="https://www.industryswarm.com/support.html">Contact Us</a>
+                         <div class="feature_teaser col-sm-4 col-md-4">
+                              <h3>Services</h3>
+                              <p>IndustrySwarm leads innovation and development of enterprise applications and infrastructure. Reach out today to find out how we can help you build the next big thing, disrupt industries, create new industries and generate unparalleled growth.</p>
+                         </div>                    
+                         <div class="feature_teaser col-sm-4 col-md-4">
+                              <h3>Consulting</h3>
+                              <p>We have tonnes of experience within eCommerce and Payments industries in Australia and a deep knowledge of the infrastructure on which these industries sit. Are you trying to build a business case or develop a strategy to expand an existing product or launch a new one? Reach out now.</p>
+                         </div>
+                         <div class="feature_teaser col-sm-4 col-md-4">
+                              <h3>ISNode</h3>
+                              <p>ISNode is a solid and innovative framework for building scalable enterprise applications. It can be used to build monolithic applications or microservice based architectures and contains many innovations - (i) a multi-tenant Identity component with full OAuth2 and SSO capabilities; (ii) extendable interfaces for your services including HTTP/S, WebSockets, ZeroMQ, NanoMSG, SSH and more; and (iii) An extendable ORM data engine for connecting to almost any data repository.</p>
                          </div>
                     </div>
                </div>
           </section>
-     </footer>
+     </div>
+     <div class="push"></div>
 </div>
+
+<footer>
+     <section class="copyright">
+          <div class="container">
+               <div class="row" style="font-size:9px;">
+                    <div class="col-sm-6 col-md-6"> Copyright ©2019 IndustrySwarm, All rights reserved </div>
+                    <div class="col-sm-6 col-md-6" style="text-align:right;"> 
+                         <a href="https://www.industryswarm.com">IndustrySwarm</a> | 
+                         <a href="https://www.industryswarm.com/isnode.html">ISNode</a> | 
+                         <a href="https://blog.industryswarm.com">Blog</a> |
+                        <a href="mailto:darren.smith@industryswarm.com">Contact Us</a> |
+                    </div>
+               </div>
+          </div>
+     </section>
+</footer>
+
 <script src="http://code.jquery.com/jquery-latest.min.js"></script>
 <script>window.jQuery || document.write('<script src="js/jquery-1.9.0.min.js"><\/script>')</script>
 <script src="twitter-bootstrap/js/bootstrap.min.js" type="text/javascript"></script>
