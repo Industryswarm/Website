@@ -3,7 +3,7 @@
 <head>
 <link href="http://fonts.googleapis.com/css?family=Open+Sans:400,300,400italic,600,600italic,700,700italic,300italic" rel="stylesheet" type="text/css">
 <meta charset="utf-8">
-<title>IndustrySwarm | Enterprise Product Labs</title>
+<title>IndustrySwarm | Turn Key Startups</title>
 <meta name="apple-mobile-web-app-capable" content="yes">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link href="animate.css" rel="stylesheet" type="text/css">
@@ -44,8 +44,6 @@
                     <div class="collapse navbar-collapse">
                          <ul class="nav pull-right navbar-nav">
                               <li class="active"><a href="index.html">IndustrySwarm</a></li>
-                              <li><a href="https://www.industryswarm.com/isnode.html">ISNode</a></li>
-                              <li><a href="https://blog.industryswarm.com">Blog</a></li>
                          </ul>
                     </div>
                </div>
@@ -57,23 +55,68 @@
           <section class="call_to_action">
                <div class="container">
                     <h3>IndustrySwarm</h3>
-                    <h4>Enterprise Product Labs</h4>
+                    <h4>Turn Key Startups</h4>
+                    <p style="margin-top:40px;">Register Your Interest</p>
+                    <div id="web-to-lead-form-container">
+                         <form id="web-to-lead-form">
+                              <div style="margin-top:20px;">
+                                   <input type="text" style="width:300px; height: 40px; text-align:left; padding-left:20px;" placeholder="Enter your email address" name="emailAddress" required/> 
+                                   <button style="height: 40px;" type="submit" name="submit">Register Now</button>
+                              </div>
+                         </form>
+                    </div>
                </div>     
           </section>
-          <section class="features_teasers_wrapper">
+
+          <script type="text/javascript">
+              var webToLeadFormElement = document.getElementById('web-to-lead-form');
+              var webToLeadFormIsSubmitted = false;
+
+              webToLeadFormElement.addEventListener('submit', function (event) {
+                  event.preventDefault();
+                  if (webToLeadFormIsSubmitted) return;
+                  webToLeadFormIsSubmitted = true;
+                  webToLeadFormElement.submit.setAttribute('disabled', 'disabled');
+
+                  var payloadData = {
+                      emailAddress: webToLeadFormElement.emailAddress.value
+                  };
+
+                  // Needed url can be found on Lead Capture detail view.
+                  var url = 'https://espocrm.industryswarm.com/api/v1/LeadCapture/e08a6366fbf7403c4fef724ef4cc3ba5'; 
+
+                  var xhr = new XMLHttpRequest();
+                  xhr.open('POST', url, true);
+                  xhr.setRequestHeader('Content-Type', 'application/json');
+                  xhr.setRequestHeader('Accept', 'application/json');
+                  xhr.onreadystatechange = function() {
+                      if (this.readyState == XMLHttpRequest.DONE && this.status == 200) {
+                          var containerElement = document.getElementById('web-to-lead-form-container');
+                          containerElement.innerHTML = '<p>Contact Form Submitted Successfully</p>';
+                      }
+                  }
+                  xhr.onerror = function() {
+                      webToLeadFormElement.submit.removeAttribute('disabled');
+                      webToLeadFormIsSubmitted = false;
+                  }
+                  xhr.send(JSON.stringify(payloadData));
+              });
+          </script>
+
+          <section class="features_teasers_wrapper" style="height:300px;">
                <div class="container">
                     <div class="row">
                          <div class="feature_teaser col-sm-4 col-md-4">
-                              <h3>Services</h3>
-                              <p>IndustrySwarm leads innovation and development of enterprise products and infrastructure. Reach out today to find out how we can help you build the next big thing, disrupt industries, create new industries and generate unparalleled growth.</p>
+                              <h3>Turn Key</h3>
+                              <p>Fill in a short application form with a modest $300 - $500 registration fee, and we will set you up with everything you need to build your startup and begin trading. It truly is a turn key solution - with the few questions that we ask, we can set you up with a customised and highly configurable solution - tailored to your idea.</p>
                          </div>                    
                          <div class="feature_teaser col-sm-4 col-md-4">
-                              <h3>Consulting</h3>
-                              <p>We have tonnes of experience within eCommerce and Payments industries in Australia and a deep knowledge of the infrastructure on which these industries sit. Are you trying to build a business case or develop a strategy to expand an existing product or launch a new one? Reach out now.</p>
+                              <h3>One Stop Shop</h3>
+                              <p>With a turn of the key, you get - a registered company entity with all supporting paperwork, a bank account, a payments facility, access to cloud-based CRM and book-keeping software and a platform on which to build your next great idea. Not to mention - a range of templates across various industries so that you don't need to start from scratch.</p>
                          </div>
                          <div class="feature_teaser col-sm-4 col-md-4">
-                              <h3>ISNode</h3>
-                              <p>ISNode is a solid and innovative framework for building scalable enterprise products. It can be used to build monolithic applications or microservice based architectures and contains many innovations - (i) a multi-tenant Identity component with full OAuth2 and SSO capabilities; (ii) extendable interfaces for your services including HTTP/S, WebSockets, ZeroMQ, NanoMSG, SSH and more; and (iii) An extendable ORM data engine for connecting to almost any data repository.</p>
+                              <h3>For Everyone</h3>
+                              <p>IndustrySwarm helps to minimise (and almost eliminate) the time/cost/skills overhead to start a new venture. You pay per seat, and our Introductory Plan waives the first 3 months of monthly fees for your first seat so that you can get started now and worry about capital later.</p>
                          </div>
                     </div>
                </div>
@@ -86,12 +129,9 @@
      <section class="copyright">
           <div class="container">
                <div class="row" style="font-size:9px;">
-                    <div class="col-sm-6 col-md-6"> Copyright ©2019 IndustrySwarm, All rights reserved </div>
+                    <div class="col-sm-6 col-md-6"> Copyright ©201w IndustrySwarm, All rights reserved </div>
                     <div class="col-sm-6 col-md-6" style="text-align:right;"> 
-                         <a href="https://www.industryswarm.com">IndustrySwarm</a> | 
-                         <a href="https://www.industryswarm.com/isnode.html">ISNode</a> | 
-                         <a href="https://blog.industryswarm.com">Blog</a> |
-                        <a href="mailto:darren.smith@industryswarm.com">Contact Us</a> |
+                         <a href="https://www.industryswarm.com">IndustrySwarm</a>
                     </div>
                </div>
           </div>
