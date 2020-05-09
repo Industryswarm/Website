@@ -187,5 +187,30 @@
 <script type="text/javascript" src="js/snap.svg-min.js"></script>
 <script type="text/javascript" src="js/restart_theme.js"></script>
 <!-- <script type="text/javascript" src="js/collapser.js"></script> -->
+
+<!-- The core Firebase JS SDK is always required and must be listed first -->
+<script src="https://www.gstatic.com/firebasejs/7.14.3/firebase-app.js"></script>
+
+<!-- TODO: Add SDKs for Firebase products that you want to use
+     https://firebase.google.com/docs/web/setup#available-libraries -->
+<script src="https://www.gstatic.com/firebasejs/7.14.3/firebase-analytics.js"></script>
+
+<script>
+  // Your web app's Firebase configuration
+  var firebaseConfig = {
+    apiKey: "AIzaSyBFd_YGfPtI7pFqS9f-f8g6y1rvvzVDOOA",
+    authDomain: "industryswarm-landing-page.firebaseapp.com",
+    databaseURL: "https://industryswarm-landing-page.firebaseio.com",
+    projectId: "industryswarm-landing-page",
+    storageBucket: "industryswarm-landing-page.appspot.com",
+    messagingSenderId: "831127100260",
+    appId: "1:831127100260:web:4fe491d7f7442991677871",
+    measurementId: "G-EDC54MVPKR"
+  };
+  // Initialize Firebase
+  firebase.initializeApp(firebaseConfig);
+  firebase.analytics();
+</script>
+
 </body>
 </html>
