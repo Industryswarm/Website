@@ -3,7 +3,7 @@
 <head>
 <link href="http://fonts.googleapis.com/css?family=Open+Sans:400,300,400italic,600,600italic,700,700italic,300italic" rel="stylesheet" type="text/css">
 <meta charset="utf-8">
-<title>IndustrySwarm | Turn Key Startups</title>
+<title>IndustrySwarm</title>
 <meta name="apple-mobile-web-app-capable" content="yes">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link href="animate.css" rel="stylesheet" type="text/css">
@@ -50,79 +50,36 @@
                     <div class="collapse navbar-collapse">
                          <ul class="nav pull-right navbar-nav">
                               <li class="active"><a href="index.html">IndustrySwarm</a></li>
+                              <li class=""><a href="https://blackrock.industryswarm.com">Blackrock</a></li>
                          </ul>
                     </div>
                </div>
           </div>
      </header>
 
-     <div class="main">
+     <div class="main" style="padding-bottom:50px;">
 
           <section class="call_to_action">
                <div class="container">
                     <h3>IndustrySwarm</h3>
-                    <h4>Turn Key Startups</h4>
-                    <p style="margin-top:40px;">Request early access and updates</p>
-                    <div id="web-to-lead-form-container">
-                         <form id="web-to-lead-form">
-                              <div style="margin-top:20px;">
-                                   <input type="text" style="width:300px; height: 40px; text-align:left; padding-left:20px;" placeholder="Enter your email address" name="emailAddress" required/> 
-                                   <button style="height: 40px;" type="submit" name="submit">Submit Request</button>
-                              </div>
-                         </form>
-                    </div>
+                    <h4>Innovative Solutions</h4>
                </div>     
           </section>
-
-          <script type="text/javascript">
-              var webToLeadFormElement = document.getElementById('web-to-lead-form');
-              var webToLeadFormIsSubmitted = false;
-
-              webToLeadFormElement.addEventListener('submit', function (event) {
-                  event.preventDefault();
-                  if (webToLeadFormIsSubmitted) return;
-                  webToLeadFormIsSubmitted = true;
-                  webToLeadFormElement.submit.setAttribute('disabled', 'disabled');
-
-                  var payloadData = {
-                      emailAddress: webToLeadFormElement.emailAddress.value
-                  };
-
-                  // Needed url can be found on Lead Capture detail view.
-                  var url = 'https://espocrm.industryswarm.com/api/v1/LeadCapture/e08a6366fbf7403c4fef724ef4cc3ba5'; 
-
-                  var xhr = new XMLHttpRequest();
-                  xhr.open('POST', url, true);
-                  xhr.setRequestHeader('Content-Type', 'application/json');
-                  xhr.setRequestHeader('Accept', 'application/json');
-                  xhr.onreadystatechange = function() {
-                      if (this.readyState == XMLHttpRequest.DONE && this.status == 200) {
-                          var containerElement = document.getElementById('web-to-lead-form-container');
-                          containerElement.innerHTML = '<p>Contact Form Submitted Successfully</p>';
-                      }
-                  }
-                  xhr.onerror = function() {
-                      webToLeadFormElement.submit.removeAttribute('disabled');
-                      webToLeadFormIsSubmitted = false;
-                  }
-                  xhr.send(JSON.stringify(payloadData));
-              });
-          </script>
 
           <section class="features_teasers_wrapper" style="height:300px;">
                <div class="container">
                     <div class="row">
                          <div class="feature_teaser col-sm-4 col-md-4">
-                              <h3>Turn Key</h3>
-                              <p>Fill in a short application form with a modest $300 - $500 registration fee, and we will set you up with everything you need to build your startup and begin trading. It truly is a turn key solution - with the few questions that we ask, we can set you up with a customised and highly configurable solution - tailored to your idea.</p>
+                              <h3>Consulting</h3>
+                              <p>Do you need the help of an expert with 13+ years of deep experience across eCommerce and Payments who is knowledgable about Strategy, Growth &amp; Innovation, Pre-Sales and Product? Then<br/> <a href="https://www.linkedin.com/in/darrenjsmith/" target="_blank">Reach Out Now</a></p>
                          </div>                    
                          <div class="feature_teaser col-sm-4 col-md-4">
-                              <h3>One Stop Shop</h3>
-                              <p>With a turn of the key, you get - a registered company entity with all supporting paperwork, a bank account, a payments facility, access to cloud-based CRM and book-keeping software and a platform on which to build your next great idea. Not to mention - a range of templates across various industries so that you don't need to start from scratch.</p>
+                              <h3>Blackrock</h3>
+                              <p>Blackrock is an open source Application Server and Framework for Node.JS. It has a tonne of great features that allow you to build anything from a proof of concept / MVP through to a fully functional and scalable enterprise application. Head on over to the <a href="https://blackrock.industryswarm.com">Blackrock website</a> to see what its all about.</p>
                          </div>
                          <div class="feature_teaser col-sm-4 col-md-4">
-                              <h3>For Everyone</h3>
-                              <p>IndustrySwarm helps to minimise (and almost eliminate) the time/cost/skills overhead to start a new venture. You pay per seat, and our Introductory Plan waives the first 3 months of monthly fees for your first seat so that you can get started now and worry about capital later.</p>
+                              <h3>Coming Soon...</h3>
+                              <p>We have a number of great ideas in the works. Stay tuned to see what's happening. You wont be disappointed.</p>
                          </div>
                     </div>
                </div>
@@ -135,7 +92,7 @@
      <section class="copyright">
           <div class="container">
                <div class="row" style="font-size:9px;">
-                    <div class="col-sm-6 col-md-6"> Copyright ©2020 IndustrySwarm, All rights reserved </div>
+                    <div class="col-sm-6 col-md-6"> Copyright ©2021 IndustrySwarm, All rights reserved </div>
                     <div class="col-sm-6 col-md-6" style="text-align:right;"> 
                          <a href="https://www.industryswarm.com">IndustrySwarm</a>
                     </div>
